@@ -82,9 +82,10 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 		Grabs and formats the info of the car
 	\************************************************************************/
 
-	// Comment (out) to change the type of car.
+	// Comment in and out to change the type of car.
 	//BMWi8 newCar = new BMWi8();
-	FerrariF12 newCar = new FerrariF12();
+	//FerrariF12 newCar = new FerrariF12();
+	CCRXTrevita newCar = new CCRXTrevita();
 
 	/*Helper functions!*/
 	private String[] getFormatInfo() {
@@ -114,6 +115,19 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
  * This section contains all the default cars.
  * Change the newCar variable in Automobile to specify a car
  * Copy and paste the format at the bottom to make your own car*/
+class CCRXTrevita {
+	private final int YEAR 			= 	2015;
+	private final String MAKE 		= 	"Koenigsegg";
+	private final String MODEL 		= 	"CCRX Trevita";
+	private final String COLOR		=	"White";
+	private final int TOP_SPEED_MPH =	250;
+	private final int CAR_HP		=	1152;
+	private final String MSRP		= 	"$4,850,000";
+	public String[] getInfo() {
+		String[] info = {String.valueOf(YEAR), MAKE, MODEL, COLOR, String.valueOf(TOP_SPEED_MPH), String.valueOf(CAR_HP), MSRP};
+		return info;
+	}
+}
 class FerrariF12 {
 	private final int YEAR 			= 	2015;
 	private final String MAKE 		= 	"Ferrari";
