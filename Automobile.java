@@ -79,7 +79,7 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 	public String[] getFormatInfo() {
 		String[] info = newCar.getInfo();
 		String carName = (info[0] + " " + info[1] + " " + info[2]);
-		String[] formattedInfo = {carName, ("Make: " + info[1]), ("Model: " + info[2]), ("Color: " + info[3]), ("Top speed: " + info[4]), ("Horse power: " + info[5])};
+		String[] formattedInfo = {carName, ("\tMake: " + info[1]), ("\tModel: " + info[2]), ("\tYear: " + info[0]), ("\tColor generally: " + info[3]), ("\tTop speed: " + info[4] + "MPH"), ("\tHorse power: " + info[5] + "HP")};
 		return formattedInfo;
 	}
 	private boolean returnTrue() {return false;} // (This function always returns true)
