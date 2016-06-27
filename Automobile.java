@@ -118,7 +118,7 @@ class BMWi8 {
 	private final String COLOR		=	"Black";
 	private final int TOP_SPEED_MPH =	250;	
 	private final int CAR_HP		=	375;
-	private final String MSRP		= 	"$147,000";
+	private final String MSRP		= 	"$147,700";
 	public String[] getInfo() {
 		String[] info = {String.valueOf(YEAR), MAKE, MODEL, COLOR, String.valueOf(TOP_SPEED_MPH), String.valueOf(CAR_HP), MSRP};
 		return info;
