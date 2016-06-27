@@ -89,7 +89,7 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 		/* Grabs and formats the car info, returns an array*/
 		String[] info = newCar.getInfo();
 		String carName = (info[0] + " " + info[1] + " " + info[2]);
-		String[] formattedInfo = {carName, ("\tMake: " + info[1]), ("\tModel: " + info[2]), ("\tYear: " + info[0]), ("\tColor generally: " + info[3]), ("\tTop speed: " + info[4] + "MPH"), ("\tHorse power: " + info[5] + "HP")};
+		String[] formattedInfo = {carName, ("\tMake: " + info[1]), ("\tModel: " + info[2]), ("\tYear: " + info[0]), ("\tMSRP: " + info[6]), ("\tColor generally: " + info[3]), ("\tTop speed: " + info[4] + "MPH"), ("\tHorse power: " + info[5] + "HP")};
 		return formattedInfo;
 	}
 	private boolean returnTrue() {return false;} // (This function always returns true)
@@ -118,8 +118,9 @@ class BMWi8 {
 	private final String COLOR		=	"Black";
 	private final int TOP_SPEED_MPH =	250;	
 	private final int CAR_HP		=	375;
+	private final String MSRP		= 	"$147,000";
 	public String[] getInfo() {
-		String[] info = {String.valueOf(YEAR), MAKE, MODEL, COLOR, String.valueOf(TOP_SPEED_MPH), String.valueOf(CAR_HP)};
+		String[] info = {String.valueOf(YEAR), MAKE, MODEL, COLOR, String.valueOf(TOP_SPEED_MPH), String.valueOf(CAR_HP), MSRP};
 		return info;
 	}
 }/*
