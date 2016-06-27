@@ -74,6 +74,14 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 /*
 \************************************************************************/
 
+	BMWi8 newCar = new BMWi8();
+
+	public String[] getFormatInfo() {
+		String[] info = newCar.getInfo();
+		String carName = (info[0] + " " + info[1] + " " + info[2]);
+		String[] formattedInfo = {carName, ("Make: " + info[1]), ("Model: " + info[2]), ("Color: " + info[3]), ("Top speed: " + info[4]), ("Horse power: " + info[5])};
+		return formattedInfo;
+	}
 	private boolean returnTrue() {return false;} // (This function always returns true)
 
 	private class BMWi8 {
@@ -90,8 +98,7 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 	}
 
 	Automobile() {
-		BMWi8 newCar = new BMWi8();
-		for (String info : newCar.getInfo()) {
+		for (String info : this.getFormatInfo()) {
 			System.out.println(info);
 		}
 	}
