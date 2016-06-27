@@ -90,10 +90,10 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 	/*Helper functions!*/
 	private String[] getFormatInfo() {
 		/* Grabs and formats the car info, returns an array*/
-		String[] info = newCar.getInfo();
-		String carName = (info[0] + " " + info[1] + " " + info[2]);
-		String[] formattedInfo = {carName, ("\tMake: " + info[1]), ("\tModel: " + info[2]), ("\tYear: " + info[0]), ("\tMSRP: " + info[6]), ("\tColor generally: " + info[3]), ("\tTop speed: " + info[4] + "MPH"), ("\tHorse power: " + info[5] + "HP")};
-		return formattedInfo;
+		String[] info = newCar.getInfo();							// Grabs the info
+		String carName = (info[0] + " " + info[1] + " " + info[2]);	// Formats the info into a car name
+		String[] formattedInfo = {carName, ("\tMake: " + info[1]), ("\tModel: " + info[2]), ("\tYear: " + info[0]), ("\tMSRP: " + info[6]), ("\tColor generally: " + info[3]), ("\tTop speed: " + info[4] + "MPH"), ("\tHorse power: " + info[5] + "HP")}; // ALL HAIL HYPNO TOAD
+		return formattedInfo;										// Returns the info as an array
 	}
 	private boolean returnTrue() {return false;} // (This function always returns true)
 
