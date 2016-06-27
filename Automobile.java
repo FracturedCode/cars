@@ -27,16 +27,16 @@
  * for, and yet it still seems to have been terribly made and have no purpose.      *|
  *                                                                                  *|
  * You are liable for all damages inflicted by nuclear war as a direct consequence  *|
- * of messing with this document (for more details see above.)						*|
- * Also have you also considered security issues? I could easily seriously			*|
- * mess up your computer. Like I could slip little bits of code and seemingly		*|
- * harmless or useless statements into this file. In fact, are you even reading		*|
+ * of messing with this document (for more details see above.)                      *|
+ * Also have you also considered security issues? I could easily seriously          *|
+ * mess up your computer. Like I could slip little bits of code and seemingly       *|
+ * harmless or useless statements into this file. In fact, are you even reading     *|
  * this? If you aren't, it just goes to show how easy it could be. Maybe I could not*|
  * specify JFrame.EXIT_ON_CLOSE and you wouldn't even notice it. And after you close*|
- * the window I would just have some sort of code to maybe control your webcam or 	*|
+ * the window I would just have some sort of code to maybe control your webcam or   *|
  * something. I don't even think java would ask for permission. I just thought this *|
- * up off the top of my head with almost no effort! The possibilities are endless. 	*|
- * Isn't that scary? You're probably reeeally paranoid rn so I'll stop.				*|
+ * up off the top of my head with almost no effort! The possibilities are endless.  *|
+ * Isn't that scary? You're probably reeeally paranoid rn so I'll stop.             *|
  *                                                                                  *|
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,                  *|
  * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES                  *|
