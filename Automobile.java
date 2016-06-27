@@ -83,7 +83,10 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 		private final String COLOR		=	"Black";
 		private final int TOP_SPEED_MPH =	250;	
 		private final int CAR_HP		=	375;
-		public String[] 
+		public String[] getInfo() {
+			String[] info = {String.valueOf(YEAR), MAKE, MODEL, COLOR, String.valueOf(TOP_SPEED_MPH), String.valueOf(CAR_HP)};
+			return info;
+		}
 	}
 
 	Automobile() {
