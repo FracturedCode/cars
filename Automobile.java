@@ -3,9 +3,9 @@
  * Date of Creation: 6/25/2016                                                      *|
  * Adam "Gabe" Carpenter                                                            *|
  *                                                                                  *|
- * This program is quite simple: it displays car information. You can create your	*|
- * own cars, or choose from one of the default premade cars.						*|
- *																					*|
+ * This program is quite simple: it displays car information. You can create your   *|
+ * own cars, or choose from one of the default premade cars.                        *|
+ *                                                                                  *|
  * A modified MIT License (MIT)                                                     *|
  * Copyright (c) 2016 FracturedCode™                                                *|
  * Contact: coding1729@gmail.com                                                    *|
