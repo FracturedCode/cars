@@ -73,11 +73,20 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
     private int totalHoursWastedHere = 2;
 	/*
 	\************************************************************************/
+	/***************************** Documentation ****************************\
+	Constructor Automobile()
+		Prints out all the car info
+
+	Internal methods
+	String[] getFormatInfo()
+		Grabs and formats the info of the car
+	\************************************************************************/
 
 	BMWi8 newCar = new BMWi8();	// You can change the car to one of the protected ones below
 
 	/*Helper functions!*/
 	private String[] getFormatInfo() {
+		/* Grabs and formats the car info, returns an array*/
 		String[] info = newCar.getInfo();
 		String carName = (info[0] + " " + info[1] + " " + info[2]);
 		String[] formattedInfo = {carName, ("\tMake: " + info[1]), ("\tModel: " + info[2]), ("\tYear: " + info[0]), ("\tColor generally: " + info[3]), ("\tTop speed: " + info[4] + "MPH"), ("\tHorse power: " + info[5] + "HP")};
@@ -87,6 +96,7 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 
 	/*Contractor!;P*/
 	Automobile() {
+		/*Prints out all the data from the car selected (above)*/
 		for (String info : this.getFormatInfo()) {
 			System.out.println(info);
 		}
@@ -101,7 +111,7 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 /************************** Cars ***************************\
  * This section contains all the default cars.
  * Change the newCar variable in Automobile to specify a car*/
-protected class BMWi8 {
+class BMWi8 {
 	private final int YEAR 			= 	2016;
 	private final String MAKE 		= 	"BMW";
 	private final String MODEL 		= 	"i8";
