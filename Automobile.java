@@ -82,7 +82,9 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 		Grabs and formats the info of the car
 	\************************************************************************/
 
-	BMWi8 newCar = new BMWi8();	// You can change the car to one of the protected ones below
+	// Comment (out) to change the type of car.
+	//BMWi8 newCar = new BMWi8();
+	FerrariF12 newCar = new FerrariF12();
 
 	/*Helper functions!*/
 	private String[] getFormatInfo() {
@@ -110,7 +112,21 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 
 /************************** Cars ***************************\
  * This section contains all the default cars.
- * Change the newCar variable in Automobile to specify a car*/
+ * Change the newCar variable in Automobile to specify a car
+ * Copy and paste the format at the bottom to make your own car*/
+class FerrariF12 {
+	private final int YEAR 			= 	2015;
+	private final String MAKE 		= 	"Ferrari";
+	private final String MODEL 		= 	"F12Berlinetta";
+	private final String COLOR		=	"Red";
+	private final int TOP_SPEED_MPH =	211;	
+	private final int CAR_HP		=	731;
+	private final String MSRP		= 	"$319,995";
+	public String[] getInfo() {
+		String[] info = {String.valueOf(YEAR), MAKE, MODEL, COLOR, String.valueOf(TOP_SPEED_MPH), String.valueOf(CAR_HP), MSRP};
+		return info;
+	}
+}
 class BMWi8 {
 	private final int YEAR 			= 	2016;
 	private final String MAKE 		= 	"BMW";
@@ -123,5 +139,19 @@ class BMWi8 {
 		String[] info = {String.valueOf(YEAR), MAKE, MODEL, COLOR, String.valueOf(TOP_SPEED_MPH), String.valueOf(CAR_HP), MSRP};
 		return info;
 	}
-}/*
+}
+/*Format -- For creating your own car
+class carName {
+	private final int YEAR 			= 	;
+	private final String MAKE 		= 	"";
+	private final String MODEL 		= 	"";
+	private final String COLOR		=	"";
+	private final int TOP_SPEED_MPH =	;	
+	private final int CAR_HP		=	;
+	private final String MSRP		= 	"$";
+	public String[] getInfo() {
+		String[] info = {String.valueOf(YEAR), MAKE, MODEL, COLOR, String.valueOf(TOP_SPEED_MPH), String.valueOf(CAR_HP), MSRP};
+		return info;
+	}
+}
 \**********************************************************/
