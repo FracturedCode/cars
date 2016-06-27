@@ -47,7 +47,7 @@
  * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE                          *|
  * OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.                                    *|
 \************************************************************************************/
-
+/*
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.Insets;
@@ -58,25 +58,26 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.JFileChooser;
 // This comment is self explanatory
-
+*/
 public class Automobile /*extends JFrame implements ActionListener*/ {
-/************************ The Automobile class **************************\
- *
- * Copyright © 2016 FracturedCode™
- * Refer to first comment for license
- *
- * Dear maintainer:
- *      Once you are done trying to 'optimize' this class,
- * and have realized what a terrible mistake that was,
- * please increment the following counter as a warning
- * to the next guy:*/
+	/************************ The Automobile class **************************\
+	 *
+	 * Copyright © 2016 FracturedCode™
+	 * Refer to first comment for license
+	 *
+	 * Dear maintainer:
+	 *      Once you are done trying to 'optimize' this class,
+	 * and have realized what a terrible mistake that was,
+	 * please increment the following counter as a warning
+	 * to the next guy:*/
     private int totalHoursWastedHere = 2;
-/*
-\************************************************************************/
+	/*
+	\************************************************************************/
 
-	BMWi8 newCar = new BMWi8();
+	BMWi8 newCar = new BMWi8();	// You can change the car to one of the protected ones below
 
-	public String[] getFormatInfo() {
+	/*Helper functions!*/
+	private String[] getFormatInfo() {
 		String[] info = newCar.getInfo();
 		String carName = (info[0] + " " + info[1] + " " + info[2]);
 		String[] formattedInfo = {carName, ("\tMake: " + info[1]), ("\tModel: " + info[2]), ("\tYear: " + info[0]), ("\tColor generally: " + info[3]), ("\tTop speed: " + info[4] + "MPH"), ("\tHorse power: " + info[5] + "HP")};
@@ -84,26 +85,32 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 	}
 	private boolean returnTrue() {return false;} // (This function always returns true)
 
-	private class BMWi8 {
-		private final int YEAR 			= 	2016;
-		private final String MAKE 		= 	"BMW";
-		private final String MODEL 		= 	"i8";
-		private final String COLOR		=	"Black";
-		private final int TOP_SPEED_MPH =	250;	
-		private final int CAR_HP		=	375;
-		public String[] getInfo() {
-			String[] info = {String.valueOf(YEAR), MAKE, MODEL, COLOR, String.valueOf(TOP_SPEED_MPH), String.valueOf(CAR_HP)};
-			return info;
-		}
-	}
-
+	/*Contractor!;P*/
 	Automobile() {
 		for (String info : this.getFormatInfo()) {
 			System.out.println(info);
 		}
 	}
 
+	/*Creates and initializes an instance of itself*/
 	public static void main(String[] args) {
 		Automobile aCar = new Automobile();
 	}
 }
+
+/************************** Cars ***************************\
+ * This section contains all the default cars.
+ * Change the newCar variable in Automobile to specify a car*/
+protected class BMWi8 {
+	private final int YEAR 			= 	2016;
+	private final String MAKE 		= 	"BMW";
+	private final String MODEL 		= 	"i8";
+	private final String COLOR		=	"Black";
+	private final int TOP_SPEED_MPH =	250;	
+	private final int CAR_HP		=	375;
+	public String[] getInfo() {
+		String[] info = {String.valueOf(YEAR), MAKE, MODEL, COLOR, String.valueOf(TOP_SPEED_MPH), String.valueOf(CAR_HP)};
+		return info;
+	}
+}/*
+\**********************************************************/
