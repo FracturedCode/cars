@@ -90,7 +90,10 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 	}
 
 	Automobile() {
-		System.out.println("IT WORKS!");
+		BMWi8 newCar = new BMWi8();
+		for (String info : newCar.getInfo()) {
+			System.out.println(info);
+		}
 	}
 
 	public static void main(String[] args) {
