@@ -72,7 +72,7 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 	 * to the next guy:*/
     private int totalHoursWastedHere = 2;
 	/*
-	\************************************************************************/
+
 	/***************************** Documentation ****************************\
 	Constructor Automobile()
 		Prints out all the car info
@@ -164,6 +164,7 @@ class carName {
 	private final int CAR_HP		=	;
 	private final String MSRP		= 	"$";
 	public String[] getInfo() {
+		// Returns an array of car information
 		String[] info = {String.valueOf(YEAR), MAKE, MODEL, COLOR, String.valueOf(TOP_SPEED_MPH), String.valueOf(CAR_HP), MSRP};
 		return info;
 	}
