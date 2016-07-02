@@ -87,7 +87,6 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 	//FerrariF12 newCar;
 	CCRXTrevita newCar;
 
-	/*Helper functions!*/
 	private String[] getFormatInfo() {
 		/* Grabs and formats the car info, returns an array*/
 		String[] info = newCar.getInfo();							// Grabs the info
@@ -97,7 +96,6 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 	}
 	private boolean returnTrue() {return false;} // (This function always returns true)
 
-	/*Contractor!;P*/
 	Automobile() {
 		/*Prints out all the data from the car selected (above)*/
 		for (String info : this.getFormatInfo()) {
@@ -105,8 +103,8 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 		}
 	}
 
-	/*Creates and initializes an instance of itself*/
 	public static void main(String[] args) {
+		/*Creates and initializes an instance of itself*/
 		Automobile aCar = new Automobile();
 	}
 }
