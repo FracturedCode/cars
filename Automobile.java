@@ -73,15 +73,6 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
     private int totalHoursWastedHere = 2;
 	/*
 
-	/***************************** Documentation ****************************\
-	Constructor Automobile()
-		Prints out all the car info
-
-	Internal methods
-	String[] getFormatInfo()
-		Grabs and formats the info of the car
-	\************************************************************************/
-
 	// Comment in and out to change the type of car.
 	//BMWi8 newCar;
 	//FerrariF12 newCar;
