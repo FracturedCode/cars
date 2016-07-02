@@ -83,9 +83,9 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 	\************************************************************************/
 
 	// Comment in and out to change the type of car.
-	//BMWi8 newCar = new BMWi8();
-	//FerrariF12 newCar = new FerrariF12();
-	CCRXTrevita newCar = new CCRXTrevita();
+	//BMWi8 newCar;
+	//FerrariF12 newCar;
+	CCRXTrevita newCar;
 
 	/*Helper functions!*/
 	private String[] getFormatInfo() {
@@ -116,53 +116,53 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
  * Change the newCar variable in Automobile to specify a car
  * Copy and paste the format at the bottom to make your own car*/
 class CCRXTrevita {
-	private final int YEAR 			= 	2015;
-	private final String MAKE 		= 	"Koenigsegg";
-	private final String MODEL 		= 	"CCRX Trevita";
-	private final String COLOR		=	"White";
-	private final int TOP_SPEED_MPH =	250;
-	private final int CAR_HP		=	1152;
-	private final String MSRP		= 	"$4,850,000";
-	public String[] getInfo() {
+	private final static int YEAR 			= 	2015;
+	private final static String MAKE 		= 	"Koenigsegg";
+	private final static String MODEL 		= 	"CCRX Trevita";
+	private final static String COLOR		=	"White";
+	private final static int TOP_SPEED_MPH 	=	250;
+	private final static int CAR_HP			=	1152;
+	private final static String MSRP		= 	"$4,850,000";
+	public static String[] getInfo() {
 		String[] info = {String.valueOf(YEAR), MAKE, MODEL, COLOR, String.valueOf(TOP_SPEED_MPH), String.valueOf(CAR_HP), MSRP};
 		return info;
 	}
 }
 class FerrariF12 {
-	private final int YEAR 			= 	2015;
-	private final String MAKE 		= 	"Ferrari";
-	private final String MODEL 		= 	"F12Berlinetta";
-	private final String COLOR		=	"Red";
-	private final int TOP_SPEED_MPH =	211;	
-	private final int CAR_HP		=	731;
-	private final String MSRP		= 	"$319,995";
-	public String[] getInfo() {
+	private final static int YEAR 			= 	2015;
+	private final static String MAKE 		= 	"Ferrari";
+	private final static String MODEL 		= 	"F12Berlinetta";
+	private final static String COLOR		=	"Red";
+	private final static int TOP_SPEED_MPH 	=	211;	
+	private final static int CAR_HP			=	731;
+	private final static String MSRP		= 	"$319,995";
+	public static String[] getInfo() {
 		String[] info = {String.valueOf(YEAR), MAKE, MODEL, COLOR, String.valueOf(TOP_SPEED_MPH), String.valueOf(CAR_HP), MSRP};
 		return info;
 	}
 }
 class BMWi8 {
-	private final int YEAR 			= 	2016;
-	private final String MAKE 		= 	"BMW";
-	private final String MODEL 		= 	"i8";
-	private final String COLOR		=	"Black";
-	private final int TOP_SPEED_MPH =	250;	
-	private final int CAR_HP		=	375;
-	private final String MSRP		= 	"$147,700";
-	public String[] getInfo() {
+	private final static int YEAR 			= 	2016;
+	private final static String MAKE 		= 	"BMW";
+	private final static String MODEL 		= 	"i8";
+	private final static String COLOR		=	"Black";
+	private final static int TOP_SPEED_MPH 	=	250;	
+	private final static int CAR_HP			=	375;
+	private final static String MSRP		= 	"$147,700";
+	public static String[] getInfo() {
 		String[] info = {String.valueOf(YEAR), MAKE, MODEL, COLOR, String.valueOf(TOP_SPEED_MPH), String.valueOf(CAR_HP), MSRP};
 		return info;
 	}
 }
 /*Format -- For creating your own car
 class carName {
-	private final int YEAR 			= 	;
-	private final String MAKE 		= 	"";
-	private final String MODEL 		= 	"";
-	private final String COLOR		=	"";
-	private final int TOP_SPEED_MPH =	;	
-	private final int CAR_HP		=	;
-	private final String MSRP		= 	"$";
+	private final static int YEAR 			= 	;
+	private final static String MAKE 		= 	"";
+	private final static String MODEL 		= 	"";
+	private final static String COLOR		=	"";
+	private final static int TOP_SPEED_MPH =	;	
+	private final static int CAR_HP		=	;
+	private final static String MSRP		= 	"$";
 	public String[] getInfo() {
 		// Returns an array of car information
 		String[] info = {String.valueOf(YEAR), MAKE, MODEL, COLOR, String.valueOf(TOP_SPEED_MPH), String.valueOf(CAR_HP), MSRP};
