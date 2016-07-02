@@ -81,15 +81,15 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 
 	private String[] getFormatInfo(int carType) {
 		/* Grabs and formats the car info, returns an array*/
-		String[] info = new String[6];
-		switch(carType) {
-			case 1:
+		String[] info = new String[6];		// Will hold all the info
+		switch(carType) {					// This switch stores the info of the chosen car
+			case 1://CCRX
 				info = trevita.getInfo();
 				break;
-			case 3:
+			case 3://F12Berlinetti
 				info = function12.getInfo();
 				break;
-			case 2:
+			case 2://BMWi8
 				info = iEight.getInfo();
 				break;
 		}
@@ -101,15 +101,16 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 
 	Automobile() {
 		/*Prints out all the data from the car selected*/
-		System.out.println(
+		System.out.println(							// Tells the user possible car selection options
 				"Choose your car:\n" + 
 				"  1 Koenigsegg CCRX Trevita\n" + 
 				"  2 BMW i8\n" + 
 				"  3 Ferrari F12");
-		System.out.print("Selection (1-3) ~$ ");
-		this.carType = input.nextInt();
+		System.out.print("Selection (1-3) ~$ ");	// Prompts the user
+		this.carType = input.nextInt();				// Gets input
+		System.out.print("\n");						// Spacing
 		for (String info : this.getFormatInfo(carType)) {
-			System.out.println(info);
+			System.out.println(info);				// Prints the chosen car info
 		}
 	}
 
@@ -168,10 +169,10 @@ class carName {
 	private final static String MAKE 		= 	"";
 	private final static String MODEL 		= 	"";
 	private final static String COLOR		=	"";
-	private final static int TOP_SPEED_MPH =	;	
-	private final static int CAR_HP		=	;
+	private final static int TOP_SPEED_MPH 	=	;	
+	private final static int CAR_HP			=	;
 	private final static String MSRP		= 	"$";
-	public String[] getInfo() {
+	publi static String[] getInfo() {
 		// Returns an array of car information
 		String[] info = {String.valueOf(YEAR), MAKE, MODEL, COLOR, String.valueOf(TOP_SPEED_MPH), String.valueOf(CAR_HP), MSRP};
 		return info;
