@@ -59,6 +59,7 @@ import javax.swing.JTextField;
 import javax.swing.JFileChooser;
 // This comment is self explanatory
 */
+import java.util.Scanner;
 public class Automobile /*extends JFrame implements ActionListener*/ {
 	/************************ The Automobile class **************************\
 	 *
@@ -71,16 +72,27 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 	 * please increment the following counter as a warning
 	 * to the next guy:*/
     private int totalHoursWastedHere = 2;
-	/*
+	
+	Scanner input = new Scanner(System.in);
+	CCRXTrevita trevita;
+	FerrariF12 function12;
+	BMWi8 iEight;
+	public int carType;
 
-	// Comment in and out to change the type of car.
-	//BMWi8 newCar;
-	//FerrariF12 newCar;
-	CCRXTrevita newCar;
-
-	private String[] getFormatInfo() {
+	private String[] getFormatInfo(int carType) {
 		/* Grabs and formats the car info, returns an array*/
-		String[] info = newCar.getInfo();							// Grabs the info
+		String[] info = new String[6];
+		switch(carType) {
+			case 1:
+				info = trevita.getInfo();
+				break;
+			case 3:
+				info = function12.getInfo();
+				break;
+			case 2:
+				info = iEight.getInfo();
+				break;
+		}
 		String carName = (info[0] + " " + info[1] + " " + info[2]);	// Formats the info into a car name
 		String[] formattedInfo = {carName, ("\tMake: " + info[1]), ("\tModel: " + info[2]), ("\tYear: " + info[0]), ("\tMSRP: " + info[6]), ("\tColor generally: " + info[3]), ("\tTop speed: " + info[4] + "MPH"), ("\tHorse power: " + info[5] + "HP")}; // ALL HAIL HYPNO TOAD
 		return formattedInfo;										// Returns the info as an array
@@ -88,8 +100,15 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 	private boolean returnTrue() {return false;} // (This function always returns true)
 
 	Automobile() {
-		/*Prints out all the data from the car selected (above)*/
-		for (String info : this.getFormatInfo()) {
+		/*Prints out all the data from the car selected*/
+		System.out.println(
+				"Choose your car:\n" + 
+				"  1 Koenigsegg CCRX Trevita\n" + 
+				"  2 BMW i8\n" + 
+				"  3 Ferrari F12");
+		System.out.print("Selection (1-3) ~$ ");
+		this.carType = input.nextInt();
+		for (String info : this.getFormatInfo(carType)) {
 			System.out.println(info);
 		}
 	}
