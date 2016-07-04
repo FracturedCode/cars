@@ -60,6 +60,7 @@ import javax.swing.JFileChooser;
 // This comment is self explanatory
 */
 import java.util.Scanner;
+import java.util.InputMismatchException;
 public class Automobile /*extends JFrame implements ActionListener*/ {
 	/************************ The Automobile class **************************\
 	 *
@@ -77,7 +78,7 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 	CCRXTrevita trevita;
 	FerrariF12 function12;
 	BMWi8 iEight;
-	public int carType;
+	private int carType;
 
 	private String[] getFormatInfo(int carType) {
 		/* Grabs and formats the car info, returns an array*/
@@ -107,11 +108,25 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 				"  2 BMW i8\n" + 
 				"  3 Ferrari F12");
 		System.out.print("Selection (1-3) ~$ ");	// Prompts the user
-		this.carType = input.nextInt();				// Gets input
+		
+		try {										// Makes sure integer is used
+			this.carType = input.nextInt();			// Gets input
+		} catch (InputMismatchException e) {
+			System.out.println("You entered a non-integer value...Oops");
+			return;
+		}
+		
+		if (this.carType>3 || this.carType<1) {
+			System.out.println("You entered a number out of the scope of selection.");
+			return;
+		}
+
 		System.out.print("\n");						// Spacing
+		
 		for (String info : this.getFormatInfo(carType)) {
 			System.out.println(info);				// Prints the chosen car info
 		}
+	
 	}
 
 	public static void main(String[] args) {
