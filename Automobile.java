@@ -97,6 +97,7 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 			case 4:
 				userCar = new CustomCar();
 				info = userCar.getInfo();
+				break;
 			default:
 				System.out.println("A logic error has occurred. Apologies for the inconvenience WHY DID YOU CHANGE THE IF STATEMENT?!");
 				break;
