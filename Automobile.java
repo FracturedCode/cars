@@ -93,6 +93,9 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 			case 2://BMWi8
 				info = iEight.getInfo();
 				break;
+			default:
+				System.out.println("A logic error has occurred. Apologies for the inconvenience WHY DID YOU CHANGE THE IF STATEMENT?!");
+				break;
 		}
 		String carName = (info[0] + " " + info[1] + " " + info[2]);	// Formats the info into a car name
 		String[] formattedInfo = {carName, ("\tMake: " + info[1]), ("\tModel: " + info[2]), ("\tYear: " + info[0]), ("\tMSRP: " + info[6]), ("\tColor generally: " + info[3]), ("\tTop speed: " + info[4] + "MPH"), ("\tHorse power: " + info[5] + "HP")}; // ALL HAIL HYPNO TOAD
@@ -112,7 +115,7 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 		
 		try {										// Makes sure integer is used
 			this.carType = input.nextInt();			// Gets input
-		} catch (InputMismatchException e) {
+		} catch (InputMismatchException e) {		// If the user enters an invalid input
 			System.out.println("You entered a non-integer value...Oops");
 			return;
 		}
