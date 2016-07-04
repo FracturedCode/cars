@@ -107,7 +107,7 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 				"  1 Koenigsegg CCRX Trevita\n" + 
 				"  2 BMW i8\n" + 
 				"  3 Ferrari F12");
-		System.out.print("Selection (1-3) ~$ ");	// Prompts the user
+		System.out.print("Selection (1-3) ~$ ");	// Prompts the user FIXME: Delete this FIXME
 		
 		try {										// Makes sure integer is used
 			this.carType = input.nextInt();			// Gets input
