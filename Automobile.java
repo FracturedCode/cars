@@ -195,7 +195,7 @@ class carName {
 	private final static int TOP_SPEED_MPH 	=	;	
 	private final static int CAR_HP			=	;
 	private final static String MSRP		= 	"$";
-	publi static String[] getInfo() {
+	public static String[] getInfo() {
 		// Returns an array of car information
 		String[] info = {String.valueOf(YEAR), MAKE, MODEL, COLOR, String.valueOf(TOP_SPEED_MPH), String.valueOf(CAR_HP), MSRP};
 		return info;
