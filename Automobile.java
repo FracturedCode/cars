@@ -78,6 +78,7 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 	CCRXTrevita trevita;
 	FerrariF12 function12;
 	BMWi8 iEight;
+	CustomCar userCar;
 	private int carType;
 
 	private String[] getFormatInfo(int carType) {
@@ -93,6 +94,9 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 			case 2://BMWi8
 				info = iEight.getInfo();
 				break;
+			case 4:
+				userCar = new CustomCar();
+				info = userCar.getInfo();
 			default:
 				System.out.println("A logic error has occurred. Apologies for the inconvenience WHY DID YOU CHANGE THE IF STATEMENT?!");
 				break;
@@ -109,7 +113,7 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 				"Choose your car:\n" + 
 				"  1 Koenigsegg CCRX Trevita\n" + 
 				"  2 BMW i8\n" + 
-				"  3 Ferrari F12" + 
+				"  3 Ferrari F12\n" + 
 				"  4 Custom car");
 		System.out.print("Selection (1-4) ~$ ");	// Prompts the user
 		
@@ -198,3 +202,12 @@ class carName {
 	}
 }
 \**********************************************************/
+class CustomCar {
+	public String[] getInfo() {
+		String[] aString = {"Hi", "Hi", "Hi", "Hi", "Hi", "Hi", "Hi"};
+		return aString;
+	}
+	CustomCar() {
+		return;
+	}
+}
