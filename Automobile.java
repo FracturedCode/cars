@@ -106,8 +106,9 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 				"Choose your car:\n" + 
 				"  1 Koenigsegg CCRX Trevita\n" + 
 				"  2 BMW i8\n" + 
-				"  3 Ferrari F12");
-		System.out.print("Selection (1-3) ~$ ");	// Prompts the user FIXME: Delete this FIXME
+				"  3 Ferrari F12" + 
+				"  4 Custom car");
+		System.out.print("Selection (1-4) ~$ ");	// Prompts the user
 		
 		try {										// Makes sure integer is used
 			this.carType = input.nextInt();			// Gets input
@@ -116,7 +117,7 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 			return;
 		}
 		
-		if (this.carType>3 || this.carType<1) {
+		if (this.carType>4 || this.carType<1) {
 			System.out.println("You entered a number out of the scope of selection.");
 			return;
 		}
