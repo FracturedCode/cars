@@ -83,8 +83,9 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 
 	private String[] getFormatInfo(int carType) {
 		/* Grabs and formats the car info, returns an array*/
-		String[] info = new String[6];		// Will hold all the info
-		switch(carType) {					// This switch stores the info of the chosen car
+		String[] info = new String[6];					// Will hold all the info
+		String[] empty = {"", "", "", "", "", "", ""};	// Used when user enters invalid input for custom car
+		switch(carType) {								// This switch stores the info of the chosen car
 			case 1://CCRX
 				info = trevita.getInfo();
 				break;
@@ -94,8 +95,11 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 			case 2://BMWi8
 				info = iEight.getInfo();
 				break;
-			case 4:
+			case 4://Custom car
 				userCar = new CustomCar();
+				if (userCar.invalid()) {				// validIn tells if there was valid user input
+					return empty;
+				}
 				info = userCar.getInfo();
 				break;
 			default:
@@ -106,7 +110,7 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 		String[] formattedInfo = {carName, ("\tMake: " + info[1]), ("\tModel: " + info[2]), ("\tYear: " + info[0]), ("\tMSRP: " + info[6]), ("\tColor generally: " + info[3]), ("\tTop speed: " + info[4] + "MPH"), ("\tHorse power: " + info[5] + "HP")}; // ALL HAIL HYPNO TOAD
 		return formattedInfo;										// Returns the info as an array
 	}
-	private boolean returnTrue() {return false;} // (This function always returns true)
+	public static boolean returnTrue() {return false;} // (This function always returns true)
 
 	Automobile() {
 		/*Prints out all the data from the car selected*/
@@ -125,7 +129,7 @@ public class Automobile /*extends JFrame implements ActionListener*/ {
 			return;
 		}
 		
-		if (this.carType>4 || this.carType<1) {
+		if (this.carType>4 || this.carType<1) {		// Makes sure user selects a correct option
 			System.out.println("You entered a number out of the scope of selection.");
 			return;
 		}
@@ -204,11 +208,35 @@ class carName {
 }
 \**********************************************************/
 class CustomCar {
+	Scanner input = new Scanner(System.in);
+	private int userInput;
+	private boolean exit;
+
 	public String[] getInfo() {
 		String[] aString = {"Hi", "Hi", "Hi", "Hi", "Hi", "Hi", "Hi"};
 		return aString;
 	}
+	public boolean invalid() {
+		return this.exit;
+	}
 	CustomCar() {
-		return;
+		System.out.println(
+			"  1 Open\n" + 
+			"  2 Create");
+
+		try {										// Makes sure integer is used
+			this.userInput = input.nextInt();		// Gets input
+		} catch (InputMismatchException e) {		// If the user enters an invalid input
+			System.out.println("You entered a non-integer value...Oops");
+			this.exit = true;
+			return;
+		}
+
+		if(this.userInput>2 || this.userInput<1) {	// Makes sure of valid input
+			System.out.println("You have chosen a number beyond the scope of selection.");
+			this.exit = true;
+		}
+
+		
 	}
 }
