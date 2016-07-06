@@ -210,12 +210,19 @@ class carName {
 class CustomCar {
 	Scanner input = new Scanner(System.in);
 	private int userInput;
+	private String fileName;
 	private boolean exit;
+	private String[] carInfo;
+
+	private boolean retrieveFileInfo(String fileName) {
+		
+	}
 
 	public String[] getInfo() {
 		String[] aString = {"Hi", "Hi", "Hi", "Hi", "Hi", "Hi", "Hi"};
 		return aString;
 	}
+
 	public boolean invalid() {
 		return this.exit;
 	}
@@ -223,7 +230,7 @@ class CustomCar {
 		System.out.println(
 			"  1 Open\n" + 
 			"  2 Create");
-
+		System.out.print("Selection (1-2) ~$ ");
 		try {										// Makes sure integer is used
 			this.userInput = input.nextInt();		// Gets input
 		} catch (InputMismatchException e) {		// If the user enters an invalid input
@@ -232,11 +239,17 @@ class CustomCar {
 			return;
 		}
 
-		if(this.userInput>2 || this.userInput<1) {	// Makes sure of valid input
+		if (this.userInput>2 || this.userInput<1) {	// Makes sure of valid input
 			System.out.println("You have chosen a number beyond the scope of selection.");
 			this.exit = true;
+			return;
 		}
 
-		
+		if (userInput==1) {
+			System.out.print("File name ~$ ");
+			this.fileName = input.next();
+			this.carInfo = this.retrieveFileInfo(carInfo);
+			if (this.exit==true) {return;}
+		}
 	}
 }
